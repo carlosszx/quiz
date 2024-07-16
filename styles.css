@@ -1,0 +1,169 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #ffe6e6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    width: 80%;
+    max-width: 500px;
+    animation: fadeIn 1s ease-in-out;
+    overflow-y: auto;
+}
+
+h1 {
+    color: #ff4d4d;
+    animation: bounceIn 1.5s;
+}
+
+.question-container, #result-container {
+    margin-top: 20px;
+}
+
+.question {
+    color: #333;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.option {
+    background-color: #ffcccc;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    animation: slideIn 1s ease-in-out;
+}
+
+.option:hover {
+    background-color: #ffb3b3;
+}
+
+.hidden {
+    display: none;
+}
+
+#result-container h2 {
+    color: #ff4d4d;
+    animation: bounceIn 1.5s;
+}
+
+.prize-check {
+    background-color: #f9f2ff;
+    border: 2px dashed #cc99ff;
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.prize-check h3 {
+    color: #6600cc;
+    margin-bottom: 10px;
+}
+
+.prize-check table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+    animation: slideIn 1s ease-in-out;
+}
+
+.prize-check td {
+    border: 1px solid #cc99ff;
+    padding: 10px;
+    text-align: center;
+}
+
+.prize-check .signature {
+    color: #6600cc;
+    font-weight: bold;
+    animation: bounceIn 1.5s;
+}
+
+#read-letter-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ffcccc;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    animation: fadeIn 1s ease-in-out;
+}
+
+#read-letter-button:hover {
+    background-color: #ffb3b3;
+}
+
+#letter-container {
+    margin-top: 20px;
+    background-color: #fff8e6;
+    border: 2px solid #ffcc99;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: left;
+    animation: fadeIn 1s ease-in-out;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.letter {
+    color: #333;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes bounceIn {
+    0%, 20%, 40%, 60%, 80%, 100% {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    }
+    0% {
+        opacity: 0;
+        transform: scale3d(.3, .3, .3);
+    }
+    20% {
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+    40% {
+        transform: scale3d(.9, .9, .9);
+    }
+    60% {
+        opacity: 1;
+        transform: scale3d(1.03, 1.03, 1.03);
+    }
+    80% {
+        transform: scale3d(.97, .97, .97);
+    }
+    100% {
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
